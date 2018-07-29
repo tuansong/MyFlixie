@@ -1,0 +1,35 @@
+body {
+ background-color: #e5e7ea;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  background-color: aquamarine; 
+}
+
+.search-box {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.search-box .search-bar {
+  width: 98%;
+}
+
+.sort {
+  position: relative;
+  top: 20%;
+}
+
+.img-poster {
+    transition: transform;
+    transition-duration: 3s;
+}
+
+.img-poster:hover {
+  transform: scale(1.03);
+} 
+
