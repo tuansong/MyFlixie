@@ -19,7 +19,7 @@ class App extends Component {
     super(props);
     this.state = {
       spinner: true,
-      currentPage : 1
+      currentPage: 1
     }
     this.searchHandler = this.searchHandler.bind(this);
     this.sortRatingHandler = this.sortRatingHandler.bind(this);
@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    setTimeout(() => this.loadSpinner(), 3000);
+    setTimeout(() => this.loadSpinner(), 0);
   }
 
   componentDidMount() {
@@ -42,7 +42,7 @@ class App extends Component {
     window.addEventListener('scroll', () => {
       if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
         this.setState({
-          currentPage : this.state.currentPage+1
+          currentPage: this.state.currentPage + 1
         })
         // you're at the bottom of the page
         axios.get(`https://api.themoviedb.org/3/movie/now_playing?api_key=${this.props.keyId}&language=en-US&page=${this.state.currentPage}`)
@@ -58,8 +58,8 @@ class App extends Component {
       }
     })
 
-    }
-  
+  }
+
 
   loadSpinner() {
     this.setState({
@@ -135,12 +135,14 @@ class App extends Component {
         <div className="App container">
           {this.state.spinner ?
             <div className="text-center">
-            {spinner}
+              {spinner}
             </div>
-             :
+            :
             <div>
-              <div className="card-deck mt-5">
-                {movies}
+              <div className>
+                <div className="card-deck d-flex justify-content-center mt-5">
+                  {movies}
+                </div>
                 {this.state.showedMovie ?
                   <MovieModal
                     title={this.state.showedMovie.title}
