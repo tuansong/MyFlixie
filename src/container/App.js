@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   componentWillMount() {
-    setTimeout(() => this.loadSpinner(), 0);
+    setTimeout(() => this.loadSpinner(), 3000);
   }
 
   componentDidMount() {
