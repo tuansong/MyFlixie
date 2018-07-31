@@ -6,16 +6,6 @@ export class MovieBox extends Component {
       width: "20em"
     }
     return (
-      // <div class="card mb-4 box-shadow">
-      //   <div class="card-header">
-      //   <img className="card-img-top" src={this.props.img} alt={this.props.title} />
-      //   </div>
-      //   <div class="card-body">
-      //   <h3 className="card-title">{this.props.title}</h3>
-      //       <p className="card-text">{this.props.overview}</p>
-      //   </div>
-      //   <div class="card-footer"></div>
-      // </div>
       <div className="card shadow mb-5 bg-white rounded text-center" style={style}>
         <div className="img-poster">
           <img className="card-img-top " src={this.props.img} alt={this.props.title} />
@@ -26,11 +16,9 @@ export class MovieBox extends Component {
           <button type="button" onClick={this.props.clicked} className="btn btn-primary mb-4" data-toggle="modal" data-target="#exampleModal">
             View more
             </button>
-          {/* <a href="#" onClick={this.props.clicked}>View more</a> */}
         </div>
       </div>
     )
   }
 }
 
-export default MovieBox

@@ -139,7 +139,7 @@ class App extends Component {
             </div>
             :
             <div>
-              <div className>
+              <div>
                 <div className="card-deck d-flex justify-content-center mt-5">
                   {movies}
                 </div>

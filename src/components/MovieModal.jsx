@@ -35,4 +35,3 @@ export class MovieModal extends Component {
     }
 }
 
-export default MovieModal
